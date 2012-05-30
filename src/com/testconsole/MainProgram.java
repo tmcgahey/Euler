@@ -37,6 +37,12 @@ public class MainProgram {
             case 7:
                 p = new Problem7();
                 break;
+            case 8:
+                p = new Problem8();
+                break;
+            case 9:
+                p = new Problem9();
+                break;
             case 10:
                 p = new Problem10();
                 break;
