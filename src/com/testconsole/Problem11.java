@@ -7,5 +7,13 @@ package com.testconsole;
  * Time: 10:18 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Problem11 {
+public class Problem11 implements ProblemSolver {
+    @Override
+    public String solveProblem() {
+
+
+
+
+        return "";
+    }
 }
