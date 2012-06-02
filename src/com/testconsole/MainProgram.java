@@ -46,6 +46,9 @@ public class MainProgram {
             case 10:
                 p = new Problem10();
                 break;
+            case 11:
+                p = new Problem11();
+                break;
             default:
                 p = new Problem1();
         }
