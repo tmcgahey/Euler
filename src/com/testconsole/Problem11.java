@@ -49,14 +49,14 @@ public class Problem11 implements ProblemSolver {
         }
 
         int greatestProduct = 0;
-        for(int i = 0; i < 16; i++)
+        for(int i = 0; i < 17; i++)
         {
-            for(int j = 0; j < 16; j++)
+            for(int j = 0; j < 17; j++)
             {
                 //rows
                 for(int rowPos = i; rowPos < i+4; rowPos++)
                 {
-                    int totalProduct = numberGrid[i+rowPos][j] * numberGrid[i+rowPos][j+1] * numberGrid[i+rowPos][j+2] * numberGrid[i+rowPos][j+3];
+                    int totalProduct = numberGrid[rowPos][j] * numberGrid[rowPos][j+1] * numberGrid[rowPos][j+2] * numberGrid[rowPos][j+3];
 
                     if(totalProduct > greatestProduct)
                     {
@@ -67,7 +67,9 @@ public class Problem11 implements ProblemSolver {
                 //columns
                 for(int colPos = j; colPos < j+4; colPos++)
                 {
-                    int totalProduct = numberGrid[i][j+colPos] * numberGrid[i+1][j+colPos] * numberGrid[i+2][j+colPos] * numberGrid[i+3][j+colPos];
+                    System.out.println(String.format("i=%s,j=%s;colPos=%s",i,j,colPos));
+                    int totalProduct = numberGrid[i][colPos] * numberGrid[i+1][colPos] * numberGrid[i+2][colPos] * numberGrid[i+3][colPos];
+                    System.out.println("got total");
 
                     if(totalProduct > greatestProduct)
                     {
